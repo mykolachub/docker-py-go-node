@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:16-bullseye
+FROM node:16-buster
 
 WORKDIR /usr/src/app
 
