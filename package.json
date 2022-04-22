@@ -4,7 +4,8 @@
   "description": "Dockerizing simple Python, Go and Node.js applications",
   "main": "index.js",
   "scripts": {
-    "python": "cd Python && docker build -t docker-python . && docker run -dp 8080:8080 docker-python"
+    "python": "cd Python && docker build -t docker-python . && docker run -dp 8080:8080 docker-python",
+    "node": "cd JavaScript && docker build -t docker-node . && docker run -dp 8080:8080 docker-node"
   },
   "repository": {
     "type": "git",
