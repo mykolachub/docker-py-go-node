@@ -1,0 +1,25 @@
+{
+  "name": "docker-py-go-node",
+  "version": "1.0.0",
+  "description": "Dockerizing simple Python, Go and Node.js applications",
+  "main": "index.js",
+  "scripts": {
+    "python": "cd Python && docker build -t docker-python . && docker run -dp 8080:8080 docker-python"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikolaichub/docker-py-go-node.git"
+  },
+  "keywords": [
+    "Docker",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "author": "Nikolai Chub <nikolaichub.me@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nikolaichub/docker-py-go-node/issues"
+  },
+  "homepage": "https://github.com/nikolaichub/docker-py-go-node#readme"
+}
