@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.responses import FileResponse
 
 from spaceship.config import Settings
-from spaceship.routers import api, health
+from spaceship.routers import api, health, matrix
 
 
 def make_app(settings: Settings) -> FastAPI:
@@ -20,6 +20,7 @@ def make_app(settings: Settings) -> FastAPI:
 
     app.include_router(api.router, prefix='/api', tags=['api'])
     app.include_router(health.router, prefix='/health', tags=['health'])
+    app.include_router(matrix.router, prefix='/matrix', tags=['matrix'])
 
     @app.get('/', include_in_schema=False, response_class=FileResponse)
     async def root() -> str:
