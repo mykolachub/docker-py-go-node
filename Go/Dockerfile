@@ -10,8 +10,12 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /build/fizzbuzz
+RUN CGO_ENABLED=0 go build -o /fizzbuzz
+
+FROM scratch
+
+COPY --from=0 /fizzbuzz /
 
 EXPOSE 8080
 
-CMD [ "/build/fizzbuzz", "serve" ]
+CMD ["/fizzbuzz", "serve"]
