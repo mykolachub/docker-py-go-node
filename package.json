@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "python": "cd Python && docker build -t docker-python . && docker run -dp 8080:8080 docker-python",
-    "node": "cd JavaScript && docker build -t docker-node . && docker run -dp 8080:8080 docker-node"
+    "node": "cd JavaScript && docker build -t docker-node . && docker run -dp 8080:8080 docker-node",
+    "go": "cd Go && docker build -t docker-go . && docker run -dp 8080:8080 docker-go"
   },
   "repository": {
     "type": "git",
