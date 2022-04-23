@@ -12,7 +12,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 go build -o /fizzbuzz
 
-FROM scratch
+FROM gcr.io/distroless/base-debian11
 
 COPY --from=0 /app/templates /templates
 COPY --from=0 /fizzbuzz /
